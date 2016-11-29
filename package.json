@@ -4,8 +4,8 @@
   "description": "",
   "main": "js/app.js",
   "scripts": {
-    "prebuild:css": "node-sass scss/core.scss static/bundle.css",
-    "build:css": "postcss --use autoprefixer < static/bundle.css | postcss --use cssnano > static/bundle.min.css",
+    "build:css": "node-sass scss/core.scss static/bundle.css",
+    "postbuild:css": "postcss --use autoprefixer < static/bundle.css | postcss --use cssnano > static/bundle.min.css",
     "build:js": "webpack -d js/app.js static/bundle.js",
     "build": "npm run build:css & npm run build:js",
     "watch:css": "nodemon --quiet --watch scss/ --ext scss --exec npm run build:css",
