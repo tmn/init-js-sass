@@ -8,12 +8,7 @@ Clone the project and start hackin'
     cd init-js-sass
     npm install
 
-Watching and building new changes using
-
-    npm run watch
-
 ## Other commands
-
 
 ### Build
 
