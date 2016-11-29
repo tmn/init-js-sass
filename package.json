@@ -4,15 +4,13 @@
   "description": "",
   "main": "js/app.js",
   "scripts": {
+    "prebuild:css": "node-sass scss/core.scss static/bundle.css",
+    "build:css": "postcss --use autoprefixer < static/bundle.css | postcss --use cssnano > static/bundle.min.css",
+    "build:js": "webpack -d js/app.js static/bundle.js",
     "build": "npm run build:css & npm run build:js",
-    "build:css": "node-sass scss/core.scss static/bundle.css && npm run postcss",
-    "build:js": "browserify -g uglifyify js/app.js -o static/bundle.js",
-
-    "watch": "npm run watch:css & npm run watch:js",
-    "watch:css": "node-sass scss/core.scss -wo static/bundle.css",
-    "watch:js": "watchify js/app.js -o static/bundle.js -v",
-
-    "postcss": "postcss --use autoprefixer --use cssnano -o static/bundle.css static/bundle.css"
+    "watch:css": "nodemon --quiet --watch scss/ --ext scss --exec npm run build:css",
+    "watch:js": "npm run build:js -- -w",
+    "watch": "npm run watch:css & npm run watch:js"
   },
   "author": {
     "name": "Tri Nguyen",
