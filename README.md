@@ -41,13 +41,6 @@ Watch and build CSS
 Watch and build both using `npm run watch`
 
 
-### Others
-
-Run autoprefixer and css minifyer (included in CSS build and watch)
-
-    npm run postcss
-
-
 
 # License
 
