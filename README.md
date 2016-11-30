@@ -1,4 +1,4 @@
-Just another skeleton to start a simple js/less project
+Just another skeleton to start a simple js/sass project
 
 # Getting started
 
