@@ -12,7 +12,7 @@ Clone the project and start hackin'
 
 ### Build
 
-Build less files
+Build scss files
 
     npm run build:css
 
